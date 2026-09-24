@@ -14,7 +14,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 <p align="center">
   <img src="https://img.shields.io/badge/Merged%20PRs-9-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="9 merged prs" />
   <img src="https://img.shields.io/badge/Projects-3-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="3 projects" />
-  <img src="https://img.shields.io/badge/Upstream%20stars-68.3k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="68.3k upstream stars" />
+  <img src="https://img.shields.io/badge/Upstream%20stars-68.4k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="68.4k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
@@ -23,7 +23,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 | [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 4.8k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-24 07:22 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-24 12:53 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Built by me
