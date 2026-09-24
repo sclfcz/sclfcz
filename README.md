@@ -20,10 +20,10 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 | Project | ★ | Merged |
 | :-- | --: | --: |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.0k | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 4.8k | 7 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 4.9k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-24 12:53 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-24 21:02 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Built by me
