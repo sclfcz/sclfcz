@@ -12,19 +12,20 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Merged%20PRs-10-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="10 merged prs" />
-  <img src="https://img.shields.io/badge/Projects-4-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="4 projects" />
-  <img src="https://img.shields.io/badge/Upstream%20stars-110.8k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="110.8k upstream stars" />
+  <img src="https://img.shields.io/badge/Merged%20PRs-11-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="11 merged prs" />
+  <img src="https://img.shields.io/badge/Projects-5-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="5 projects" />
+  <img src="https://img.shields.io/badge/Upstream%20stars-193.8k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="193.8k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
 | :-- | --: | --: |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.0k | 1 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.0k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.3k | 1 |
 | [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 4.9k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-25 09:04 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-25 14:35 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Built by me
