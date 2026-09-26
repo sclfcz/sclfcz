@@ -22,7 +22,9 @@ from render_merged_prs import collect, star_floor  # noqa: E402
 API = "https://api.github.com/graphql"
 SLOTS = 6
 # A grid of nothing but other people's repos hides what you build yourself.
-OWN_SLOTS = 1
+# Two slots because there are two shipped projects worth reading (a desktop app and a
+# mini program); raise it again when a third one lands, and drop it back if one goes stale.
+OWN_SLOTS = 2
 
 PINS = """
 query($login: String!) {
