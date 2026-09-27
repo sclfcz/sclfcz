@@ -52,13 +52,13 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 | Project | ★ | Merged |
 | :-- | --: | --: |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.0k | 1 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.1k | 1 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.1k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.4k | 1 |
 | [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 5.3k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-27 20:40 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-27 23:26 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
