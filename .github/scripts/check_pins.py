@@ -88,12 +88,18 @@ def main() -> int:
         name = row["repo"]["nameWithOwner"]
         stars.setdefault(name, row["repo"]["stargazerCount"])
         merges[name] += 1
-    merged_order = sorted(stars, key=lambda n: (-stars[n], n))
+    # Merges first, stars second: a project that merged seven of my PRs is stronger
+    # evidence of reach than a single merge in a project with more stars.
+    merged_order = sorted(stars, key=lambda n: (-merges[n], -stars[n], n))
 
     own = gql(token, OWN, {"login": args.owner})["user"]["repositories"]["nodes"]
     own.sort(key=lambda n: n["pushedAt"] or "", reverse=True)
     own.sort(key=lambda n: -n["stargazerCount"])
-    own_order = [n["nameWithOwner"] for n in own if n["nameWithOwner"] not in stars]
+    # The profile repo is not "work" — it is already linked at the top of the page.
+    profile_repo = f"{args.owner}/{args.owner}"
+    own_order = [
+        n["nameWithOwner"] for n in own if n["nameWithOwner"] != profile_repo and n["nameWithOwner"] not in stars
+    ]
 
     nodes = gql(token, PINS, {"login": args.owner})["user"]["pinnedItems"]["nodes"]
     current = [n["nameWithOwner"] for n in nodes if n and n["__typename"] == "Repository"]

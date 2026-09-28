@@ -6,7 +6,7 @@
 <p align="center">
   <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-F97316?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
-  <a href="#open-source-contributions"><img alt="Upstream merged PRs" src="https://img.shields.io/badge/Upstream%20merged%20PRs-11-8250DF?style=flat-square&logo=git&logoColor=white" /></a>
+  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs" src="https://img.shields.io/badge/Upstream%20merged%20PRs-12-8250DF?style=flat-square&logo=git&logoColor=white" /></a><!-- header-stats:end -->
 </p>
 
 - Building [CommerceAgent](https://github.com/sclfcz/commerceagent), a self-hosted Claude Code workbench reachable from the browser and seven messaging channels.
@@ -45,20 +45,23 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Merged%20PRs-11-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="11 merged prs" />
-  <img src="https://img.shields.io/badge/Projects-5-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="5 projects" />
-  <img src="https://img.shields.io/badge/Upstream%20stars-194.6k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="194.6k upstream stars" />
+  <img src="https://img.shields.io/badge/Merged%20PRs-12-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="12 merged prs" />
+  <img src="https://img.shields.io/badge/Projects-6-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="6 projects" />
+  <img src="https://img.shields.io/badge/Upstream%20stars-221.3k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="221.3k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
 | :-- | --: | --: |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.1k | 1 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.2k | 1 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.1k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.4k | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 5.4k | 7 |
+| [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.6k | 1 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 5.5k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-28 08:38 UTC.</sub>
+<sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
+
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-28 16:32 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech

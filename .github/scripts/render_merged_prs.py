@@ -20,6 +20,10 @@ from pathlib import Path
 API = "https://api.github.com/graphql"
 START = "<!-- merged-prs:start -->"
 END = "<!-- merged-prs:end -->"
+# The header badge carries the same number as the block below, so it is generated
+# here too: a hand-written count drifts as soon as the next PR is merged.
+HEADER_START = "<!-- header-stats:start -->"
+HEADER_END = "<!-- header-stats:end -->"
 MAX_PAGES = 5
 MIN_STARS = 1000
 
@@ -131,7 +135,7 @@ def compact(number: int) -> str:
     return f"{number / 1000:.1f}k" if number >= 1000 else str(number)
 
 
-def render(rows: list[dict], merged_total: int) -> str:
+def render(rows: list[dict], merged_total: int, below_floor: list[str] | None = None) -> str:
     if not rows:
         return "_Nothing merged upstream yet._"
 
@@ -175,7 +179,20 @@ def render(rows: list[dict], merged_total: int) -> str:
         out.append(row + f"| {entry['merged']} |")
     if len(rows) < merged_total:
         out += ["", f"<sub>Per-project counts cover the {len(rows)} most recent merges.</sub>"]
+    if below_floor:
+        names = ", ".join(f"`{name}`" for name in below_floor)
+        noun = "merge" if len(below_floor) == 1 else "merges"
+        out += ["", f"<sub>Plus {len(below_floor)} more {noun} below the {MIN_STARS:,}-star floor: {names}.</sub>"]
     return "\n".join(out)
+
+
+def render_header(merged_total: int) -> str:
+    """The header badge, kept in step with the block below by the same run."""
+    url = (
+        f"{SHIELDS}{quote('Upstream merged PRs')}-{quote(str(merged_total))}-8250DF"
+        "?style=flat-square&logo=git&logoColor=white"
+    )
+    return f'<a href="#open-source-contributions"><img alt="Upstream merged PRs" src="{url}" /></a>'
 
 
 def main() -> int:
@@ -198,21 +215,25 @@ def main() -> int:
             raise SystemExit("Set GH_TOKEN / GITHUB_TOKEN, or pass --input.")
         rows, merged_total = collect(token, f"author:{args.owner} is:pr is:merged")
 
+    # Named so the block can say what the star floor hid instead of silently dropping it.
+    below_floor = sorted(
+        {row["repo"]["nameWithOwner"] for row in rows if row["repo"]["stargazerCount"] < MIN_STARS}
+    )
     rows, hidden = star_floor(rows)
     merged_total -= hidden
 
-    body = render(rows, merged_total)
+    body = render(rows, merged_total, below_floor)
+    header = render_header(merged_total)
 
     readme = args.readme
     text = readme.read_text(encoding="utf-8")
+
+    header_pattern = re.compile(re.escape(HEADER_START) + r"(.*?)" + re.escape(HEADER_END), re.S)
     pattern = re.compile(re.escape(START) + r"(.*?)" + re.escape(END), re.S)
-    match = pattern.search(text)
-    if not match:
+    if not header_pattern.search(text):
+        raise SystemExit(f"Header markers not found in {readme}")
+    if not pattern.search(text):
         raise SystemExit(f"Markers not found in {readme}")
-    # The footnote timestamp changes every run, so compare on the data alone.
-    if STAMP.sub("", match.group(1)).strip() == body.strip():
-        print(f"{readme} already up to date ({merged_total} merged)")
-        return 0
 
     block = (
         f"{body}\n\n<sub>Merges only, counted per project above the {MIN_STARS:,}-star floor. "
@@ -220,12 +241,16 @@ def main() -> int:
         "[.github/workflows/refresh.yml](.github/workflows/refresh.yml)"
         f"; last change {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}.</sub>"
     )
-    start, stop = match.span()
-    readme.write_text(
-        f"{text[:start]}{START}\n{block}\n{END}{text[stop:]}",
-        encoding="utf-8",
-        newline="\n",
-    )
+
+    updated = header_pattern.sub(lambda _: f"{HEADER_START}{header}{HEADER_END}", text, count=1)
+    updated = pattern.sub(lambda _: f"{START}\n{block}\n{END}", updated, count=1)
+
+    # Only the footnote timestamp changes when nothing else did.
+    if STAMP.sub("", updated) == STAMP.sub("", text):
+        print(f"{readme} already up to date ({merged_total} merged)")
+        return 0
+
+    readme.write_text(updated, encoding="utf-8", newline="\n")
     print(f"{readme} refreshed ({merged_total} merged)")
     return 0
 
