@@ -61,7 +61,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-28 16:32 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-28 16:33 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
