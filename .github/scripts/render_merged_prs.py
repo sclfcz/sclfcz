@@ -242,13 +242,20 @@ def main() -> int:
         f"; last change {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}.</sub>"
     )
 
-    updated = header_pattern.sub(lambda _: f"{HEADER_START}{header}{HEADER_END}", text, count=1)
-    updated = pattern.sub(lambda _: f"{START}\n{block}\n{END}", updated, count=1)
-
-    # Only the footnote timestamp changes when nothing else did.
-    if STAMP.sub("", updated) == STAMP.sub("", text):
+    # Compare the block *contents* (STAMP only strips a trailing <sub>), not the whole
+    # README: the footnote timestamp changes every run, and "nothing but the timestamp
+    # changed" must not produce a commit.
+    current_block = pattern.search(text).group(1)
+    current_header = header_pattern.search(text).group(1)
+    if (
+        STAMP.sub("", current_block).strip() == STAMP.sub("", block).strip()
+        and current_header.strip() == header.strip()
+    ):
         print(f"{readme} already up to date ({merged_total} merged)")
         return 0
+
+    updated = header_pattern.sub(lambda _: f"{HEADER_START}{header}{HEADER_END}", text, count=1)
+    updated = pattern.sub(lambda _: f"{START}\n{block}\n{END}", updated, count=1)
 
     readme.write_text(updated, encoding="utf-8", newline="\n")
     print(f"{readme} refreshed ({merged_total} merged)")
