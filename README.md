@@ -47,7 +47,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 <p align="center">
   <img src="https://img.shields.io/badge/Merged%20PRs-12-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="12 merged prs" />
   <img src="https://img.shields.io/badge/Projects-6-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="6 projects" />
-  <img src="https://img.shields.io/badge/Upstream%20stars-221.3k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="221.3k upstream stars" />
+  <img src="https://img.shields.io/badge/Upstream%20stars-221.4k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="221.4k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
@@ -61,7 +61,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-28 16:33 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-28 17:04 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
