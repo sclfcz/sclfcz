@@ -47,7 +47,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 <p align="center">
   <img src="https://img.shields.io/badge/Merged%20PRs-12-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="12 merged prs" />
   <img src="https://img.shields.io/badge/Projects-6-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="6 projects" />
-  <img src="https://img.shields.io/badge/Upstream%20stars-221.7k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="221.7k upstream stars" />
+  <img src="https://img.shields.io/badge/Upstream%20stars-221.8k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="221.8k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
@@ -56,12 +56,12 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.2k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.4k | 1 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.6k | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 5.7k | 7 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 5.8k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-29 15:09 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-29 20:02 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
