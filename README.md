@@ -1,13 +1,17 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/banner-dark.svg" />
-  <img alt="IronMurphy — AI Agent / Full-stack Engineer" src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/banner-light.svg" />
+  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/hero-dark-still.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/hero-light-still.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/hero-dark.svg" />
+  <img alt="IronMurphy, AI agent and full-stack engineer. An edge dislocation glides through a crystal lattice one atom row at a time: small steps every day." src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/hero-light.svg" />
 </picture>
 
 <p align="center">
-  <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-F97316?style=flat-square&logo=electron&logoColor=white" /></a>
+  <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-C8783E?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
   <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs" src="https://img.shields.io/badge/Upstream%20merged%20PRs-12-8250DF?style=flat-square&logo=git&logoColor=white" /></a><!-- header-stats:end -->
 </p>
+
+I studied materials, where metals don't break all at once: they give way one row of atoms at a time. I build software the same way, in small verified steps.
 
 - Building [CommerceAgent](https://github.com/sclfcz/commerceagent), a self-hosted Claude Code workbench reachable from the browser and seven messaging channels.
 - Building [康养日记](https://github.com/sclfcz/health-miniprogram), a WeChat Mini Program that keeps elderly patients on their medication schedule and tells their family when they fall off it.
@@ -15,29 +19,43 @@
 
 ## Built by me
 
-Projects I started and maintain myself — the work I would want you to read first.
+Projects I started and maintain myself, the work I would want you to read first.
 
-### 🛒 [`CommerceAgent`](https://github.com/sclfcz/commerceagent) · 面向电商场景的智能运营工作台
+### [CommerceAgent](https://github.com/sclfcz/commerceagent), 面向电商场景的智能运营工作台
 
-> A self-hosted, multi-user, agent-first Claude Code workbench: one agent, workspace, and automation set, reachable from the browser and seven messaging channels.
+<picture>
+  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/commerceagent-dark-still.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/commerceagent-light-still.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/commerceagent-dark.svg" />
+  <img alt="Messages from the browser, Feishu, Telegram, QQ, DingTalk, WeChat, Discord and WhatsApp all reach one CommerceAgent, which runs each task on the host or in a Docker sandbox." src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/commerceagent-light.svg" />
+</picture>
 
-<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white" /> <img alt="Electron" src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" /> <img alt="License" src="https://img.shields.io/badge/License-MIT-0F766E?style=flat-square" />
+A self-hosted, multi-user, agent-first Claude Code workbench: one agent, workspace, and automation set, reachable from the browser and seven messaging channels.
 
 - Wraps the Claude Agent SDK for TypeScript into a long-running service shared across Feishu, Telegram, QQ, DingTalk, WeChat, Discord, and WhatsApp.
 - Tasks execute on the host or inside Docker sandboxes, with an explicit ACL matrix and CI on every push.
 - Desktop builds bundle the backend, the web UI, and a Node runtime into a single Electron app, so installing it needs neither Node nor a database.
 
-### 🏥 康养日记 · [`health-miniprogram`](https://github.com/sclfcz/health-miniprogram)
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-5.9-3178C6?style=flat-square&logo=typescript&logoColor=white" /> <img alt="Electron" src="https://img.shields.io/badge/Electron-desktop-47848F?style=flat-square&logo=electron&logoColor=white" /> <img alt="License" src="https://img.shields.io/badge/License-MIT-0F766E?style=flat-square" />
 
-> Medication care for elderly patients and their families: scheduled reminders, automatic missed-dose records, and a family alert after three missed doses in a row.
+### [康养日记](https://github.com/sclfcz/health-miniprogram), medication care for elderly patients
 
-<img alt="WeChat Mini Program" src="https://img.shields.io/badge/WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /> <img alt="CloudBase" src="https://img.shields.io/badge/CloudBase-006EFF?style=flat-square&logo=tencentcloud&logoColor=white" /> <img alt="tests" src="https://img.shields.io/badge/regression%20tests-no%20dependencies-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+<picture>
+  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/health-dark-still.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/health-light-still.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/health-dark.svg" />
+  <img alt="Nine scheduled doses over three days. Missed doses are recorded automatically, and the third miss in a row notifies the family." src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/health-light.svg" />
+</picture>
 
-- Two scheduled cloud functions carry the whole reminder pipeline — a 5-minute reminder pass and a 10-minute missed-dose pass — each idempotent through its own log collection, so a retry never double-notifies a family.
-- The "three missed doses in a row" streak is computed over a **total order** (business time → `create_time` → `_id`), so the verdict cannot flip with the database's return order.
+Scheduled reminders, automatic missed-dose records, and a family alert after three missed doses in a row.
+
+- Two scheduled cloud functions carry the whole reminder pipeline, a 5-minute reminder pass and a 10-minute missed-dose pass. Each is idempotent through its own log collection, so a retry never double-notifies a family.
+- The "three missed doses in a row" streak is computed over a **total order** (business time, then `create_time`, then `_id`), so the verdict cannot flip with the database's return order.
 - Timezone-safe by construction: the cloud runs on UTC and the client derives "today" in Asia/Shanghai, so the task list and the reminders cannot disagree by a day.
 - Every query is owner-scoped and paged past the platform caps (100 documents per cloud query, 20 per client query); the naive version quietly read other patients' plans and truncated at 100 records.
 - Ships a dependency-free suite: `node tests/regression.test.js` runs 11 invariants across three timezones, and each one goes red if the corresponding fix is reverted.
+
+<img alt="WeChat Mini Program" src="https://img.shields.io/badge/WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /> <img alt="CloudBase" src="https://img.shields.io/badge/CloudBase-006EFF?style=flat-square&logo=tencentcloud&logoColor=white" /> <img alt="tests" src="https://img.shields.io/badge/regression%20tests-no%20dependencies-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
 
 ## Open-source contributions
 
@@ -82,11 +100,11 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/output/snake-dark.svg" />
-    <img alt="my contribution graph, eaten by a snake" src="https://raw.githubusercontent.com/sclfcz/sclfcz/output/snake-light.svg" />
+    <img alt="My contribution graph, eaten by a snake" src="https://raw.githubusercontent.com/sclfcz/sclfcz/output/snake-light.svg" />
   </picture>
 </p>
 
-<sub>🐍 Generated daily from my contribution graph by [.github/workflows/snake.yml](.github/workflows/snake.yml).</sub>
+<sub>Generated daily from my contribution graph by [.github/workflows/snake.yml](.github/workflows/snake.yml). Artwork above is built by [design/build.py](design/build.py).</sub>
 
 ---
 

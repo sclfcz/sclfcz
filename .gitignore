@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# design/build.py fonts: Archivo, IBM Plex Sans, Noto Sans SC (Google Fonts, OFL)
+design/fonts/
