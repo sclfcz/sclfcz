@@ -17,6 +17,9 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import make_badges  # noqa: E402
+
 API = "https://api.github.com/graphql"
 START = "<!-- merged-prs:start -->"
 END = "<!-- merged-prs:end -->"
@@ -26,6 +29,8 @@ HEADER_START = "<!-- header-stats:start -->"
 HEADER_END = "<!-- header-stats:end -->"
 MAX_PAGES = 5
 MIN_STARS = 1000
+RAW = "https://raw.githubusercontent.com/sclfcz/sclfcz/main"
+ASSETS = Path(__file__).resolve().parents[2] / "assets"
 
 PAGE = """
 query($search: String!, $cursor: String) {
@@ -160,11 +165,15 @@ def render(rows: list[dict], merged_total: int, below_floor: list[str] | None = 
     # One language across every row is noise, so the column only appears once they differ.
     show_lang = len(langs) > 1
 
+    # Local SVG, not shields.io: these numbers change on every merge, and a badge
+    # whose URL changes has to be re-fetched by GitHub's image proxy - when that
+    # fetch fails the page shows a broken image. make_badges.py writes the file in
+    # the same run, so the picture and the table cannot disagree.
+    make_badges.write_badges(ASSETS, merged_total, len(projects), compact(total_stars))
+    alt = f"{merged_total} merged PRs in {len(projects)} projects, {compact(total_stars)} upstream stars"
     out = [
         '<p align="center">',
-        "  " + metric("Merged PRs", str(merged_total), "8250DF", "git"),
-        "  " + metric("Projects", str(len(projects)), "0969DA", "box"),
-        "  " + metric("Upstream stars", compact(total_stars), "BF8700", "github"),
+        f'  <img src="{RAW}/assets/stats.svg" alt="{alt}" />',
         "</p>",
         "",
         "| Project | ★ | Language | Merged |" if show_lang else "| Project | ★ | Merged |",
@@ -187,12 +196,12 @@ def render(rows: list[dict], merged_total: int, below_floor: list[str] | None = 
 
 
 def render_header(merged_total: int) -> str:
-    """The header badge, kept in step with the block below by the same run."""
-    url = (
-        f"{SHIELDS}{quote('Upstream merged PRs')}-{quote(str(merged_total))}-8250DF"
-        "?style=flat-square&logo=git&logoColor=white"
+    """The header chip. Local SVG for the same reason as the metrics strip above."""
+    return (
+        '<a href="#open-source-contributions">'
+        f'<img alt="Upstream merged PRs: {merged_total}" src="{RAW}/assets/header-merged.svg" />'
+        "</a>"
     )
-    return f'<a href="#open-source-contributions"><img alt="Upstream merged PRs" src="{url}" /></a>'
 
 
 def main() -> int:

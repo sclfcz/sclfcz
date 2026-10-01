@@ -20,7 +20,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Render the merged-PR block
+      # Writes assets/stats.svg + assets/header-merged.svg as well: the badge image and
+      # the numbers in the block come from the same run, so they cannot drift apart.
+      - name: Render the merged-PR block and the local badges
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PROFILE_OWNER: ${{ github.repository_owner }}
@@ -36,13 +38,13 @@ jobs:
       - name: Commit if the data changed
         run: |
           set -euo pipefail
-          if git diff --quiet -- README.md; then
-            echo "README.md unchanged"
+          if git diff --quiet -- README.md assets; then
+            echo "profile unchanged"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md assets
           git commit -m "docs: refresh merged PR list [skip ci]"
           git push
 

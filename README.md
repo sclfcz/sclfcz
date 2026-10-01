@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-C8783E?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
-  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs" src="https://img.shields.io/badge/Upstream%20merged%20PRs-13-8250DF?style=flat-square&logo=git&logoColor=white" /></a><!-- header-stats:end -->
+  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs: 13" src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/header-merged.svg" /></a><!-- header-stats:end -->
 </p>
 
 I studied materials, where metals don't break all at once: they give way one row of atoms at a time. I build software the same way, in small verified steps.
@@ -63,9 +63,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Merged%20PRs-13-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="13 merged prs" />
-  <img src="https://img.shields.io/badge/Projects-6-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="6 projects" />
-  <img src="https://img.shields.io/badge/Upstream%20stars-222.3k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="222.3k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="13 merged PRs in 6 projects, 222.3k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
@@ -79,7 +77,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-01 02:57 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-01 03:05 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="453.0" height="28" viewBox="0 0 453.0 28" role="img">
+  <g transform="translate(0.0,0)">
+    <rect width="96.4" height="28" rx="3" fill="#3C4A5A" />
+    <rect x="93.4" width="39.9" height="28" rx="3" fill="#9366C4" />
+    <rect x="93.4" y="0" width="6" height="28" fill="#9366C4" />
+    <text x="48.2" y="18.2" fill="#FFFFFF" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="12.0" font-weight="700" text-anchor="middle">MERGED PRS</text>
+    <text x="114.8" y="18.2" fill="#FFFFFF" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="12.0" font-weight="700" text-anchor="middle">13</text>
+  </g>
+  <g transform="translate(141.3,0)">
+    <rect width="81.5" height="28" rx="3" fill="#3C4A5A" />
+    <rect x="78.5" width="32.4" height="28" rx="3" fill="#5A8BE0" />
+    <rect x="78.5" y="0" width="6" height="28" fill="#5A8BE0" />
+    <text x="40.8" y="18.2" fill="#FFFFFF" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="12.0" font-weight="700" text-anchor="middle">PROJECTS</text>
+    <text x="96.2" y="18.2" fill="#FFFFFF" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="12.0" font-weight="700" text-anchor="middle">6</text>
+  </g>
+  <g transform="translate(260.2,0)">
+    <rect width="126.2" height="28" rx="3" fill="#3C4A5A" />
+    <rect x="123.2" width="69.6" height="28" rx="3" fill="#C8783E" />
+    <rect x="123.2" y="0" width="6" height="28" fill="#C8783E" />
+    <text x="63.1" y="18.2" fill="#FFFFFF" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="12.0" font-weight="700" text-anchor="middle">UPSTREAM STARS</text>
+    <text x="159.5" y="18.2" fill="#FFFFFF" font-family="Verdana,DejaVu Sans,Geneva,sans-serif" font-size="12.0" font-weight="700" text-anchor="middle">222.3k</text>
+  </g>
+</svg>
