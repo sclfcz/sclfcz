@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-C8783E?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
-  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs" src="https://img.shields.io/badge/Upstream%20merged%20PRs-12-8250DF?style=flat-square&logo=git&logoColor=white" /></a><!-- header-stats:end -->
+  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs" src="https://img.shields.io/badge/Upstream%20merged%20PRs-13-8250DF?style=flat-square&logo=git&logoColor=white" /></a><!-- header-stats:end -->
 </p>
 
 I studied materials, where metals don't break all at once: they give way one row of atoms at a time. I build software the same way, in small verified steps.
@@ -63,14 +63,14 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Merged%20PRs-12-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="12 merged prs" />
+  <img src="https://img.shields.io/badge/Merged%20PRs-13-8250DF?style=for-the-badge&logo=git&logoColor=white" alt="13 merged prs" />
   <img src="https://img.shields.io/badge/Projects-6-0969DA?style=for-the-badge&logo=box&logoColor=white" alt="6 projects" />
-  <img src="https://img.shields.io/badge/Upstream%20stars-222.2k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="222.2k upstream stars" />
+  <img src="https://img.shields.io/badge/Upstream%20stars-222.3k-BF8700?style=for-the-badge&logo=github&logoColor=white" alt="222.3k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
 | :-- | --: | --: |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.3k | 1 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.3k | 2 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.2k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.4k | 1 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.6k | 1 |
@@ -79,7 +79,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-09-30 20:46 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-01 02:57 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
