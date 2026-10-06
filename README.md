@@ -8,7 +8,7 @@
 <p align="center">
   <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-C8783E?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
-  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs: 15" src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/header-merged.svg" /></a><!-- header-stats:end -->
+  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs: 16" src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/header-merged.svg" /></a><!-- header-stats:end -->
 </p>
 
 I studied materials, where metals don't break all at once: they give way one row of atoms at a time. I build software the same way, in small verified steps.
@@ -63,22 +63,22 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="15 merged PRs in 7 projects, 251.7k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="16 merged PRs in 7 projects, 252.0k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
 | :-- | --: | --: |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.4k | 3 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.4k | 4 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.4k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.6k | 1 |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.0k | 1 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.7k | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 7.1k | 7 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 7.3k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-06 09:23 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-06 16:14 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
