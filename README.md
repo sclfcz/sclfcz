@@ -63,7 +63,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="18 merged PRs in 7 projects, 253.1k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="18 merged PRs in 7 projects, 253.2k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
@@ -73,12 +73,12 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.6k | 1 |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.0k | 2 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.7k | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 8.1k | 7 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 8.2k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-09 06:01 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-09 13:09 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
