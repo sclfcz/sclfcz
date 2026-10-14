@@ -63,12 +63,12 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="22 merged PRs in 7 projects, 254.9k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="22 merged PRs in 7 projects, 255.0k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
 | :-- | --: | --: |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.8k | 9 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.9k | 9 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.7k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.7k | 1 |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.1k | 2 |
@@ -78,7 +78,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-14 10:34 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-14 15:28 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
