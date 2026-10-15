@@ -73,12 +73,12 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.7k | 1 |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.1k | 2 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.7k | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 9.3k | 7 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 9.4k | 7 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
-<sub>Plus 1 more merge below the 1,000-star floor: `llm-d/llm-d-inference-sim`.</sub>
+<sub>Plus 2 more merges below the 1,000-star floor: `llm-d/llm-d-inference-sim`, `sclfcz/commerceagent`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-15 00:59 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-15 05:51 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
