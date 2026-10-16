@@ -68,17 +68,17 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 | Project | ★ | Merged |
 | :-- | --: | --: |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 83.9k | 9 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 84.0k | 9 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.8k | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.8k | 1 |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.1k | 2 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.7k | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 9.6k | 8 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 9.7k | 8 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | 1 |
 
 <sub>Plus 2 more merges below the 1,000-star floor: `llm-d/llm-d-inference-sim`, `sclfcz/commerceagent`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-16 09:57 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-16 14:47 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
