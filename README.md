@@ -63,7 +63,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="23 merged PRs in 7 projects, 255.7k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="23 merged PRs in 7 projects, 255.8k upstream stars" />
 </p>
 
 | Project | ★ | Merged |
@@ -78,7 +78,7 @@ Projects with 1,000+ stars that have merged my pull requests upstream, refreshed
 
 <sub>Plus 2 more merges below the 1,000-star floor: `llm-d/llm-d-inference-sim`, `sclfcz/commerceagent`.</sub>
 
-<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-16 23:59 UTC.</sub>
+<sub>Merges only, counted per project above the 1,000-star floor. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-17 12:29 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
