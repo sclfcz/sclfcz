@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Rewrite the merged-PR block of the profile README.
 
-One row per project that merged a pull request, whatever its size. The
+One row per project that merged a pull request, whatever its size.
+Merges into the profile owner's own repositories are not upstream contributions and are
+left out of both the table and the totals. The
 query selects no title, number or URL, so the page carries project-level counts only.
 """
 
@@ -134,7 +136,7 @@ def compact(number: int) -> str:
     return f"{number / 1000:.1f}k" if number >= 1000 else str(number)
 
 
-def render(rows: list[dict], merged_total: int) -> str:
+def render(rows: list[dict], merged_total: int, assets: Path = ASSETS) -> str:
     if not rows:
         return "_Nothing merged upstream yet._"
 
@@ -163,7 +165,7 @@ def render(rows: list[dict], merged_total: int) -> str:
     # whose URL changes has to be re-fetched by GitHub's image proxy - when that
     # fetch fails the page shows a broken image. make_badges.py writes the file in
     # the same run, so the picture and the table cannot disagree.
-    make_badges.write_badges(ASSETS, merged_total, len(projects), compact(total_stars))
+    make_badges.write_badges(assets, merged_total, len(projects), compact(total_stars))
     alt = f"{merged_total} merged PRs in {len(projects)} projects, {compact(total_stars)} upstream stars"
     out = [
         '<p align="center">',
@@ -204,6 +206,12 @@ def main() -> int:
         / "README.md",
     )
     parser.add_argument("--input", type=Path, help="JSON [rows, total] instead of calling the API.")
+    parser.add_argument(
+        "--assets",
+        type=Path,
+        default=ASSETS,
+        help="Where the badge SVGs go (defaults to the repo's assets/; point it elsewhere in tests).",
+    )
     args = parser.parse_args()
 
     if args.input:
@@ -214,7 +222,17 @@ def main() -> int:
             raise SystemExit("Set GH_TOKEN / GITHUB_TOKEN, or pass --input.")
         rows, merged_total = collect(token, f"author:{args.owner} is:pr is:merged")
 
-    body = render(rows, merged_total)
+    # A merge into my own repository is not an upstream contribution: drop those rows
+    # (and their weight in the totals) so the section only ever talks about other people's
+    # projects.
+    own_prefix = f"{args.owner}/".lower()
+    upstream = [row for row in rows if not row["repo"]["nameWithOwner"].lower().startswith(own_prefix)]
+    excluded = len(rows) - len(upstream)
+    if excluded:
+        rows = upstream
+        merged_total -= excluded
+
+    body = render(rows, merged_total, args.assets)
     header = render_header(merged_total)
 
     readme = args.readme
