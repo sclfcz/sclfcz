@@ -13,6 +13,9 @@ permissions:
 
 concurrency:
   group: refresh-merged-prs
+  # Two triggers (push + schedule/dispatch) can overlap; the newer run has fresher data,
+  # so let it win instead of racing the older one to the same commit.
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -46,7 +49,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md assets
           git commit -m "docs: refresh merged PR list [skip ci]"
-          git push
+          # A concurrent run may have pushed first; rebase and retry rather than failing.
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "push attempt $attempt failed; rebasing onto origin/main"
+            git pull --rebase --autostash origin main
+          done
+          echo "::error::could not push the refresh after 3 attempts" >&2
+          exit 1
 
       # Pins have no API, so the run only leaves the order to apply by hand.
       - name: Upload the pin plan
