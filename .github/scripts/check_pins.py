@@ -87,19 +87,19 @@ def main() -> int:
         name = row["repo"]["nameWithOwner"]
         stars.setdefault(name, row["repo"]["stargazerCount"])
         merges[name] += 1
-    # Merges first, stars second: a project that merged seven of my PRs is stronger
-    # evidence of reach than a single merge in a project with more stars.
-    merged_order = sorted((n for n in stars if n not in own_set), key=lambda n: (-merges[n], -stars[n], n))
-
     own = gql(token, OWN, {"login": args.owner})["user"]["repositories"]["nodes"]
     own.sort(key=lambda n: n["pushedAt"] or "", reverse=True)
     own.sort(key=lambda n: -n["stargazerCount"])
     # The profile repo is not "work" — it is already linked at the top of the page.
     profile_repo = f"{args.owner}/{args.owner}"
     # An own repo that also merged one of my PRs is still my work first: keep it in the
-    # own group (and drop it from the merged group below) instead of demoting it.
+    # own group and drop it from the merged group, instead of demoting it.
     own_order = [n["nameWithOwner"] for n in own if n["nameWithOwner"] != profile_repo]
     own_set = set(own_order)
+
+    # Merges first, stars second: a project that merged nine of my PRs is stronger
+    # evidence of reach than a single merge in a project with more stars.
+    merged_order = sorted((n for n in stars if n not in own_set), key=lambda n: (-merges[n], -stars[n], n))
 
     nodes = gql(token, PINS, {"login": args.owner})["user"]["pinnedItems"]["nodes"]
     current = [n["nameWithOwner"] for n in nodes if n and n["__typename"] == "Repository"]
@@ -122,7 +122,9 @@ def main() -> int:
 
     lines = [f"Pin these {len(target)}, in this order:"]
     for pos, name in enumerate(target, 1):
-        tag = f"merged x{merges[name]}" if name in merges else "personal"
+        # Own work is tagged by authorship, not by merge count: a self-merge is not
+        # an upstream contribution.
+        tag = "personal" if name in own_set else f"merged x{merges[name]}"
         lines.append(f"  {pos}. {name:<34} {tag}")
     if to_add:
         lines.append("Add:    " + ", ".join(to_add))
