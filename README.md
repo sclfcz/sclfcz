@@ -59,7 +59,7 @@ Scheduled reminders, automatic missed-dose records, and a family alert after thr
 
 ## Open-source contributions
 
-Projects with 1,000+ stars that have merged my pull requests upstream, refreshed automatically. Individual pull requests are not listed here.
+Every upstream project that has merged one of my pull requests, whatever its size, refreshed automatically. Individual pull requests are not listed here.
 
 <!-- merged-prs:start -->
 <p align="center">

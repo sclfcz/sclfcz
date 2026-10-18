@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Rewrite the merged-PR block of the profile README.
 
-One row per project that merged a pull request and has at least MIN_STARS (1,000) stars. The
+One row per project that merged a pull request, whatever its size. The
 query selects no title, number or URL, so the page carries project-level counts only.
 """
 
@@ -28,7 +28,6 @@ END = "<!-- merged-prs:end -->"
 HEADER_START = "<!-- header-stats:start -->"
 HEADER_END = "<!-- header-stats:end -->"
 MAX_PAGES = 5
-MIN_STARS = 1000
 RAW = "https://raw.githubusercontent.com/sclfcz/sclfcz/main"
 ASSETS = Path(__file__).resolve().parents[2] / "assets"
 
@@ -130,17 +129,12 @@ def collect(token: str, query: str) -> tuple[list[dict], int]:
     return rows, total
 
 
-def star_floor(rows: list[dict], minimum: int = MIN_STARS) -> tuple[list[dict], int]:
-    """Drop merges in projects under `minimum` stars - they read as padding, not reach."""
-    kept = [row for row in rows if row["repo"]["stargazerCount"] >= minimum]
-    return kept, len(rows) - len(kept)
-
 
 def compact(number: int) -> str:
     return f"{number / 1000:.1f}k" if number >= 1000 else str(number)
 
 
-def render(rows: list[dict], merged_total: int, below_floor: list[str] | None = None) -> str:
+def render(rows: list[dict], merged_total: int) -> str:
     if not rows:
         return "_Nothing merged upstream yet._"
 
@@ -188,10 +182,6 @@ def render(rows: list[dict], merged_total: int, below_floor: list[str] | None = 
         out.append(row + f"| {entry['merged']} |")
     if len(rows) < merged_total:
         out += ["", f"<sub>Per-project counts cover the {len(rows)} most recent merges.</sub>"]
-    if below_floor:
-        names = ", ".join(f"`{name}`" for name in below_floor)
-        noun = "merge" if len(below_floor) == 1 else "merges"
-        out += ["", f"<sub>Plus {len(below_floor)} more {noun} below the {MIN_STARS:,}-star floor: {names}.</sub>"]
     return "\n".join(out)
 
 
@@ -224,14 +214,7 @@ def main() -> int:
             raise SystemExit("Set GH_TOKEN / GITHUB_TOKEN, or pass --input.")
         rows, merged_total = collect(token, f"author:{args.owner} is:pr is:merged")
 
-    # Named so the block can say what the star floor hid instead of silently dropping it.
-    below_floor = sorted(
-        {row["repo"]["nameWithOwner"] for row in rows if row["repo"]["stargazerCount"] < MIN_STARS}
-    )
-    rows, hidden = star_floor(rows)
-    merged_total -= hidden
-
-    body = render(rows, merged_total, below_floor)
+    body = render(rows, merged_total)
     header = render_header(merged_total)
 
     readme = args.readme
@@ -245,7 +228,7 @@ def main() -> int:
         raise SystemExit(f"Markers not found in {readme}")
 
     block = (
-        f"{body}\n\n<sub>Merges only, counted per project above the {MIN_STARS:,}-star floor. "
+        f"{body}\n\n<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. "
         f"Checked automatically by "
         "[.github/workflows/refresh.yml](.github/workflows/refresh.yml)"
         f"; last change {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}.</sub>"
