@@ -21,6 +21,10 @@ from render_merged_prs import collect  # noqa: E402
 
 API = "https://api.github.com/graphql"
 SLOTS = 6
+
+# Repositories that exist but should not be promoted on the profile: the pin grid is
+# prime real estate, and not every repo is something to lead with.
+SKIP_PINS = {"sclfcz/EstateAgents"}
 # A grid of nothing but other people's repos hides what you build yourself.
 # Two slots because there are two shipped projects worth reading (a desktop app and a
 # mini program); raise it again when a third one lands, and drop it back if one goes stale.
@@ -94,7 +98,11 @@ def main() -> int:
     profile_repo = f"{args.owner}/{args.owner}"
     # An own repo that also merged one of my PRs is still my work first: keep it in the
     # own group and drop it from the merged group, instead of demoting it.
-    own_order = [n["nameWithOwner"] for n in own if n["nameWithOwner"] != profile_repo]
+    own_order = [
+        n["nameWithOwner"]
+        for n in own
+        if n["nameWithOwner"] != profile_repo and n["nameWithOwner"] not in SKIP_PINS
+    ]
     own_set = set(own_order)
 
     # Merges first, stars second: a project that merged nine of my PRs is stronger
