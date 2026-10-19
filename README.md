@@ -8,6 +8,7 @@
 <p align="center">
   <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-C8783E?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
+  <a href="https://github.com/sclfcz/growth-os"><img alt="Featured: Growth OS" src="https://img.shields.io/badge/Featured-Growth%20OS-2D5FB8?style=flat-square&logo=nextdotjs&logoColor=white" /></a>
   <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs: 25" src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/header-merged.svg" /></a><!-- header-stats:end -->
 </p>
 
@@ -15,6 +16,7 @@ I studied materials, where metals don't break all at once: they give way one row
 
 - Building [CommerceAgent](https://github.com/sclfcz/commerceagent), a self-hosted Claude Code workbench reachable from the browser and seven messaging channels.
 - Building [康养日记](https://github.com/sclfcz/health-miniprogram), a WeChat Mini Program that keeps elderly patients on their medication schedule and tells their family when they fall off it.
+- Building [Growth OS](https://github.com/sclfcz/growth-os), a self-hosted personal growth workbench that keeps focus time, study plans, workouts, meditation, expenses, and the daily review in one place.
 - Exploring agent systems, MCP apps, developer tooling, and self-hosted software. Open to thoughtful collaboration on useful open-source projects.
 
 ## Built by me
@@ -57,6 +59,24 @@ Scheduled reminders, automatic missed-dose records, and a family alert after thr
 
 <img alt="WeChat Mini Program" src="https://img.shields.io/badge/WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /> <img alt="CloudBase" src="https://img.shields.io/badge/CloudBase-006EFF?style=flat-square&logo=tencentcloud&logoColor=white" /> <img alt="tests" src="https://img.shields.io/badge/regression%20tests-no%20dependencies-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
 
+### [Growth OS](https://github.com/sclfcz/growth-os), 个人成长工作台
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/growthos-dark-still.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/growthos-light-still.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/growthos-dark.svg" />
+  <img alt="A clock sweeps one day from 06:00. Focus sessions, study blocks, a workout, meditation and expenses fill five tracks, and a 22:45 daily review totals them." src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/growthos-light.svg" />
+</picture>
+
+Focus timer, study plan, workouts, meditation, bookkeeping, and the daily review in one self-hosted app, stored in SQLite.
+
+- A study planner built on the LeetCode Hot 100 with spaced repetition, a daily quota of new problems, and a progress forecast.
+- Multi-account by isolation: every account's personal data lives in its own SQLite file; only the opt-in "一起" pairing between two named accounts shares a database.
+- The daily review records mood, energy, sleep, wins, and open problems, with an optional AI review against any OpenAI-compatible endpoint, kept off by default and server-side only.
+- Self-hosts with Docker Compose and Caddy (IP or domain mode), with daily automatic backups that keep the latest 14; ships unit tests and Playwright end-to-end tests.
+
+<img alt="Next.js" src="https://img.shields.io/badge/Next.js-15-000000?style=flat-square&logo=nextdotjs&logoColor=white" /> <img alt="SQLite" src="https://img.shields.io/badge/SQLite-Drizzle%20ORM-003B57?style=flat-square&logo=sqlite&logoColor=white" /> <img alt="License" src="https://img.shields.io/badge/License-MIT-0F766E?style=flat-square" />
+
 ## Open-source contributions
 
 Every upstream project that has merged one of my pull requests, whatever its size, refreshed automatically. Individual pull requests are not listed here.
@@ -87,6 +107,8 @@ Every upstream project that has merged one of my pull requests, whatever its siz
   <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
   <img alt="Python" src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
   <img alt="React" src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
+  <img alt="SQLite" src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white" />
   <img alt="Electron" src="https://img.shields.io/badge/Electron-47848F?style=flat-square&logo=electron&logoColor=white" />
   <img alt="MCP" src="https://img.shields.io/badge/MCP-6E56CF?style=flat-square" />
   <img alt="Docker" src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />

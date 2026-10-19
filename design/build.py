@@ -461,9 +461,108 @@ def fig_care(mode: str, still: bool) -> str:
     return frame(w, h, c, title, "".join(parts))
 
 
+LANES = [  # (label, colour key, blocks as (start hour, end hour); None = point events)
+    ("Focus", "blue", [(9, 11.5), (14, 16), (20.5, 21.5)]),
+    ("Study", "purple", [(8, 9), (19, 20)]),
+    ("Workout", "bronze", [(18, 19)]),
+    ("Meditate", "straw", [(7, 7.4), (22, 22.4)]),
+    ("Ledger", None, [8.6, 12.6, 18.9]),
+]
+REVIEW_AT = 22.75
+
+
+def fig_growth(mode: str, still: bool) -> str:
+    c = PALETTES[mode]
+    w, h = 900, 300
+    h0, h1, hx0, hx1 = 6, 24, 180, 840
+    per_h, hold = 0.6, 3.0
+    loop = per_h * (23 - h0) + hold
+    reset = loop - 0.4
+
+    def hx(hour: float) -> float:
+        return hx0 + (hour - h0) * (hx1 - hx0) / (h1 - h0)
+
+    def ht(hour: float) -> float:
+        return (hour - h0) * per_h
+
+    parts, live = [], []
+    lane_y = [92 + i * 32 for i in range(len(LANES))]
+    for y, (label, key, events) in zip(lane_y, LANES):
+        parts.append(f'<path d="M{hx0} {y} H{hx1}" stroke="{c["plane"]}" stroke-width="1.5"/>')
+        parts.append(f'<path fill="{c["muted"]}" d="{ST.path(label, 156, y + 5, 15, "plex", {"wght": 450}, anchor="end")}"/>')
+        for ev in events:
+            if key is None:
+                x = hx(ev)
+                anim = "" if still else disc("opacity", loop, "0", [(ht(ev), "1")])
+                live.append(f'<circle cx="{fmt(x)}" cy="{y}" r="5" fill="{c["text"]}" opacity="{"1" if still else "0"}">{anim}</circle>')
+                continue
+            a, b = ev
+            x, bw = hx(a), hx(b) - hx(a)
+            if still:
+                anim, w0 = "", fmt(bw)
+            else:
+                k = f"0;{ht(a) / loop:.4f};{ht(b) / loop:.4f};1"
+                anim = (
+                    f'<animate attributeName="width" dur="{fmt(loop)}s" repeatCount="indefinite" '
+                    f'calcMode="linear" keyTimes="{k}" values="0;0;{fmt(bw)};{fmt(bw)}"/>'
+                )
+                w0 = "0"
+            live.append(f'<rect x="{fmt(x)}" y="{y - 7}" width="{w0}" height="14" rx="3" fill="{c[key]}">{anim}</rect>')
+
+    # the daily review: a bracket over every lane and the day's totals
+    rx = hx(REVIEW_AT) + 14
+    top, bot = lane_y[0] - 14, lane_y[-1] + 14
+    focus = sum(b - a for a, b in LANES[0][2])
+    summary = (
+        f"{int(REVIEW_AT):02d}:{round(REVIEW_AT % 1 * 60):02d} daily review: {fmt(focus)} h focus, {len(LANES[1][2])} study sessions, "
+        f"{len(LANES[2][2])} workout, {len(LANES[4][2])} expenses"
+    )
+    review = (
+        f'<path d="M{fmt(rx - 8)} {top} H{fmt(rx)} V{bot} H{fmt(rx - 8)}" fill="none" stroke="{c["bronze"]}" '
+        f'stroke-width="2" stroke-linejoin="round"/>'
+        f'<path fill="{c["bronze"]}" d="{ST.path(summary, 64, 51, 15, "plex", {"wght": 560})}"/>'
+    )
+    intro = f'<path fill="{c["muted"]}" d="{ST.path("One day, five trackers, one SQLite file", 64, 51, 15, "plex", {"wght": 400})}"/>'
+    t_rev = ht(REVIEW_AT)
+    if still:
+        live.append(review)
+    else:
+        live.append(f'<g opacity="0">{disc("opacity", loop, "0", [(t_rev, "1")])}{review}</g>')
+        parts.append(f'<g>{disc("opacity", loop, "1", [(t_rev, "0"), (reset, "1")])}{intro}</g>')
+    if still:
+        parts.append(f'<g>{"".join(live)}</g>')
+    else:
+        parts.append(f'<g>{disc("opacity", loop, "1", [(reset, "0")])}{"".join(live)}</g>')
+
+    # hour axis
+    parts.append(f'<path d="M{hx0} 250 H{hx1}" stroke="{c["plane"]}" stroke-width="1.5"/>')
+    for hour in range(h0, h1 + 1, 3):
+        x = hx(hour)
+        parts.append(f'<path d="M{fmt(x)} 246 V254" stroke="{c["plane"]}" stroke-width="1.5"/>')
+        parts.append(f'<path fill="{c["muted"]}" d="{ST.path(f"{hour:02d}:00", x, 274, 13.5, "plex", {"wght": 400}, anchor="middle")}"/>')
+
+    # the clock sweeping the day
+    if not still:
+        k = f"0;{ht(23) / loop:.4f};1"
+        end = fmt(hx(23) - hx0)
+        sweep = (
+            f'<animateTransform attributeName="transform" type="translate" dur="{fmt(loop)}s" '
+            f'repeatCount="indefinite" keyTimes="{k}" values="0 0;{end} 0;{end} 0"/>'
+        )
+        fade = disc("opacity", loop, "1", [(ht(23), "0")])
+        parts.append(
+            f'<g><path d="M{hx0} {top - 4} V254" stroke="{c["straw"]}" stroke-width="2.4" stroke-linecap="round">{fade}</path>{sweep}</g>'
+        )
+
+    parts.append(f'<path fill="{c["text"]}" d="{ST.path("Growth OS", w - 64, 52, 22, "archivo", {"wght": 700, "wdth": 104}, anchor="end")}"/>')
+
+    title = "Growth OS: one day of focus, study, workout, meditation and expenses, closed by a daily review."
+    return frame(w, h, c, title, "".join(parts))
+
+
 def main() -> None:
     ASSETS.mkdir(exist_ok=True)
-    jobs = {"hero": hero, "commerceagent": fig_commerce, "health": fig_care}
+    jobs = {"hero": hero, "commerceagent": fig_commerce, "health": fig_care, "growthos": fig_growth}
     for name, fn in jobs.items():
         for mode in PALETTES:
             for still in (False, True):
