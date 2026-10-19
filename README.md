@@ -63,22 +63,22 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="25 merged PRs in 9 projects, 258.9k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="25 merged PRs in 9 projects, 259.1k upstream stars" />
 </p>
 
 | Project | ★ | Language | Merged |
 | :-- | --: | :-- | --: |
 | [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 84.1k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 9 |
-| [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.8k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
+| [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 59.9k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.8k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.1k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 2 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 26.8k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 9.9k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 8 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 10.0k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 8 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`apache/burr`](https://github.com/apache/burr) | 2.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`llm-d/llm-d-inference-sim`](https://github.com/llm-d/llm-d-inference-sim) | 216 | ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) | 1 |
 
-<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-18 19:30 UTC.</sub>
+<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-19 08:16 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
