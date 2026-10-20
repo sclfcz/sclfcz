@@ -83,7 +83,7 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="25 merged PRs in 9 projects, 259.7k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="25 merged PRs in 9 projects, 259.8k upstream stars" />
 </p>
 
 | Project | ★ | Language | Merged |
@@ -98,7 +98,7 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 | [`apache/burr`](https://github.com/apache/burr) | 2.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`llm-d/llm-d-inference-sim`](https://github.com/llm-d/llm-d-inference-sim) | 217 | ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) | 1 |
 
-<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-20 18:42 UTC.</sub>
+<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-20 21:56 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
