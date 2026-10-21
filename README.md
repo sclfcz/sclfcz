@@ -88,7 +88,7 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 
 | Project | ★ | Language | Merged |
 | :-- | --: | :-- | --: |
-| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 84.2k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 9 |
+| [`bytedance/deer-flow`](https://github.com/bytedance/deer-flow) | 84.3k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 9 |
 | [`crewAIInc/crewAI`](https://github.com/crewAIInc/crewAI) | 60.0k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`agno-agi/agno`](https://github.com/agno-agi/agno) | 42.9k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.2k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 2 |
@@ -98,7 +98,7 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 | [`apache/burr`](https://github.com/apache/burr) | 2.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`llm-d/llm-d-inference-sim`](https://github.com/llm-d/llm-d-inference-sim) | 217 | ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) | 1 |
 
-<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-21 15:35 UTC.</sub>
+<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-10-21 22:45 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
