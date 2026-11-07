@@ -6,6 +6,7 @@
 </picture>
 
 <p align="center">
+  <a href="https://github.com/sclfcz/Orbit"><img alt="Featured: Orbit" src="https://img.shields.io/badge/Featured-Orbit-F38020?style=flat-square&logo=cloudflare&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-C8783E?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/growth-os"><img alt="Featured: Growth OS" src="https://img.shields.io/badge/Featured-Growth%20OS-2D5FB8?style=flat-square&logo=nextdotjs&logoColor=white" /></a>
@@ -14,6 +15,7 @@
 
 I studied materials, where metals don't break all at once: they give way one row of atoms at a time. I build software the same way, in small verified steps.
 
+- Building [Orbit](https://github.com/sclfcz/Orbit), a self-hosted personal agent on Cloudflare that coordinates coding agents across my own computers.
 - Building [CommerceAgent](https://github.com/sclfcz/commerceagent), a self-hosted Claude Code workbench reachable from the browser and seven messaging channels.
 - Building [康养日记](https://github.com/sclfcz/health-miniprogram), a WeChat Mini Program that keeps elderly patients on their medication schedule and tells their family when they fall off it.
 - Building [Growth OS](https://github.com/sclfcz/growth-os), a self-hosted personal growth workbench that keeps focus time, study plans, workouts, meditation, expenses, and the daily review in one place.
@@ -22,6 +24,23 @@ I studied materials, where metals don't break all at once: they give way one row
 ## Built by me
 
 Projects I started and maintain myself, the work I would want you to read first.
+
+### [Orbit](https://github.com/sclfcz/Orbit), 跨电脑协调编码 Agent 的个人智能体
+
+<picture>
+  <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-dark-still.svg" />
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-light-still.svg" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-dark.svg" />
+  <img alt="Requests from the web workspace or the owner API reach one Orbit on a Cloudflare Durable Object, which dispatches each task to a coding agent on a MacBook, a Linux server or a Mac mini and receives its progress back." src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-light.svg" />
+</picture>
+
+A self-hosted personal agent on Cloudflare: one persistent conversation that hands work to pi or Claude Code on your own computers and keeps track of it.
+
+- Runs on `pi-durable` inside a Cloudflare Durable Object, so conversation, Threads, and decisions waiting on you survive restarts; deploys into your own account with one click.
+- A connector on each macOS or Linux machine (`npm i -g @sclfcz/orbit`) holds an outbound WebSocket, starts local coding-agent sessions, and reports progress back. No inbound port is opened.
+- Code and full session records stay on the machine; Orbit reads them on demand while it is online and never keeps a copy.
+
+<img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-7.0-3178C6?style=flat-square&logo=typescript&logoColor=white" /> <img alt="Cloudflare" src="https://img.shields.io/badge/Cloudflare-Durable%20Objects-F38020?style=flat-square&logo=cloudflare&logoColor=white" /> <img alt="License" src="https://img.shields.io/badge/License-MIT-0F766E?style=flat-square" />
 
 ### [CommerceAgent](https://github.com/sclfcz/commerceagent), 面向电商场景的智能运营工作台
 

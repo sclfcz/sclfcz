@@ -331,6 +331,78 @@ def frame(w, h, c, title, body) -> str:
     )
 
 
+INPUTS = ["Web workspace", "Owner API"]
+MACHINES = [("MacBook", "pi"), ("Linux server", "Claude Code"), ("Mac mini", "pi, Claude Code")]
+
+
+def fig_orbit(mode: str, still: bool) -> str:
+    c = PALETTES[mode]
+    w, h = 900, 300
+    D = 2.4  # seconds per task: ask, dispatch, report back
+    loop = D * len(MACHINES)
+    bx, by, bw, bh = 270, 108, 250, 84
+    cx, cy = bx + bw / 2, by + bh / 2
+    rx, ry = 330, 122  # the orbit the machines ride on
+    parts = []
+
+    # the orbit: the right half of an ellipse around Orbit, dashes drifting along it
+    drift = "" if still else (
+        '<animate attributeName="stroke-dashoffset" dur="6s" repeatCount="indefinite" values="0;-48"/>'
+    )
+    parts.append(
+        f'<path d="M{fmt(cx)} {fmt(cy - ry)} A{rx} {ry} 0 0 1 {fmt(cx)} {fmt(cy + ry)}" fill="none" '
+        f'stroke="{c["plane"]}" stroke-width="1.5" stroke-dasharray="2 10" stroke-linecap="round">{drift}</path>'
+    )
+
+    ins = []
+    for i, label in enumerate(INPUTS):
+        y = cy - 30 + i * 60
+        parts.append(f'<path id="in{i}" d="M150 {fmt(y)} C215 {fmt(y)} 205 {fmt(cy)} {bx} {fmt(cy)}" fill="none" stroke="{c["plane"]}" stroke-width="1.5"/>')
+        ins.append((label, y))
+        parts.append(f'<path fill="{c["muted"]}" d="{ST.path(label, 136, y + 6, 17, "plex", {"wght": 450}, anchor="end")}"/>')
+
+    for j, (name, agents) in enumerate(MACHINES):
+        a = math.radians((j - 1) * 36)
+        mx, my = cx + rx * math.cos(a), cy + ry * math.sin(a)
+        out = f"M{bx + bw} {fmt(cy)} C{bx + bw + 60} {fmt(cy)} {fmt(mx - 70)} {fmt(my)} {fmt(mx)} {fmt(my)}"
+        back = f"M{fmt(mx)} {fmt(my)} C{fmt(mx - 70)} {fmt(my)} {bx + bw + 60} {fmt(cy)} {bx + bw} {fmt(cy)}"
+        parts.append(f'<path id="out{j}" d="{out}" fill="none" stroke="{c["plane"]}" stroke-width="1.5"/>')
+        parts.append(f'<path id="back{j}" d="{back}" fill="none"/>')
+        t0 = j * D
+        ring = "" if still else disc("fill", loop, c["atom"], [(t0 + 1.35, c["straw"]), (t0 + 1.6, c["atom"])])
+        parts.append(f'<circle cx="{fmt(mx)}" cy="{fmt(my)}" r="5.5" fill="{c["atom"]}" stroke="{c["ground"]}" stroke-width="3">{ring}</circle>')
+        parts.append(f'<path fill="{c["text"]}" d="{ST.path(name, mx + 18, my - 2, 17, "plex", {"wght": 500})}"/>')
+        parts.append(f'<path fill="{c["muted"]}" d="{ST.path(agents, mx + 18, my + 18, 14, "plex", {"wght": 400})}"/>')
+
+    parts.append(
+        f'<rect x="{bx}" y="{by}" width="{bw}" height="{bh}" rx="10" fill="{c["ground"]}" '
+        f'stroke="{c["straw"]}" stroke-width="1.6"/>'
+    )
+    parts.append(f'<path fill="{c["text"]}" d="{ST.path("Orbit", cx, cy + 2, 26, "archivo", {"wght": 700, "wdth": 104}, anchor="middle")}"/>')
+    parts.append(f'<path fill="{c["muted"]}" d="{ST.path("one conversation, every machine", cx, cy + 25, 14.5, "plex", {"wght": 400}, anchor="middle")}"/>')
+    parts.append(f'<path fill="{c["muted"]}" d="{ST.path("Cloudflare Durable Object", cx, by + bh + 26, 13.5, "plex", {"wght": 400}, anchor="middle")}"/>')
+
+    if not still:
+        for j in range(len(MACHINES)):
+            t0 = j * D
+            i = j % len(INPUTS)
+            label, y = ins[i]
+            glyph = ST.path(label, 136, y + 6, 17, "plex", {"wght": 450}, anchor="end")
+            hl = disc("opacity", loop, "0", [(t0, "1"), (t0 + 0.8, "0")])
+            parts.append(f'<path fill="{c["straw"]}" opacity="0" d="{glyph}">{hl}</path>')
+            legs = [  # (path, colour, start, end): ask, dispatch, progress back
+                (f"in{i}", c["straw"], t0 + 0.05, t0 + 0.7),
+                (f"out{j}", c["straw"], t0 + 0.75, t0 + 1.35),
+                (f"back{j}", c["blue"], t0 + 1.65, t0 + 2.25),
+            ]
+            for pid, col, a, b in legs:
+                show = disc("opacity", loop, "0", [(a, "1"), (b, "0")])
+                parts.append(f'<circle r="5" fill="{col}" opacity="0">{show}{travel(pid, loop, a, b)}</circle>')
+
+    title = "Orbit: one conversation from the web workspace or owner API, dispatched to coding agents on the owner's machines, which report progress back."
+    return frame(w, h, c, title, "".join(parts))
+
+
 CHANNELS = ["Browser", "Feishu", "Telegram", "QQ", "DingTalk", "WeChat", "Discord", "WhatsApp"]
 
 
@@ -562,7 +634,7 @@ def fig_growth(mode: str, still: bool) -> str:
 
 def main() -> None:
     ASSETS.mkdir(exist_ok=True)
-    jobs = {"hero": hero, "commerceagent": fig_commerce, "health": fig_care, "growthos": fig_growth}
+    jobs = {"hero": hero, "orbit": fig_orbit, "commerceagent": fig_commerce, "health": fig_care, "growthos": fig_growth}
     for name, fn in jobs.items():
         for mode in PALETTES:
             for still in (False, True):
