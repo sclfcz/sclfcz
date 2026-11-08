@@ -31,10 +31,10 @@ Projects I started and maintain myself, the work I would want you to read first.
   <source media="(prefers-color-scheme: dark) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-dark-still.svg" />
   <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-light-still.svg" />
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-dark.svg" />
-  <img alt="Requests from the web workspace or the owner API reach one Orbit on a Cloudflare Durable Object, which dispatches each task to a coding agent on a MacBook, a Linux server or a Mac mini and receives its progress back." src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-light.svg" />
+  <img alt="Requests from the web workspace or the owner API reach one Orbit on a Cloudflare Durable Object, which dispatches each task to pi, Claude Code or Codex on a MacBook, a Linux server or a Mac mini and receives its progress back." src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/orbit-light.svg" />
 </picture>
 
-A self-hosted personal agent on Cloudflare: one persistent conversation that hands work to pi or Claude Code on your own computers and keeps track of it.
+A self-hosted personal agent on Cloudflare: one persistent conversation that hands work to pi, Claude Code, or Codex on your own computers and keeps track of it.
 
 - Runs on `pi-durable` inside a Cloudflare Durable Object, so conversation, Threads, and decisions waiting on you survive restarts; deploys into your own account with one click.
 - A connector on each macOS or Linux machine (`npm i -g @sclfcz/orbit`) holds an outbound WebSocket, starts local coding-agent sessions, and reports progress back. No inbound port is opened.

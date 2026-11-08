@@ -332,7 +332,7 @@ def frame(w, h, c, title, body) -> str:
 
 
 INPUTS = ["Web workspace", "Owner API"]
-MACHINES = [("MacBook", "pi"), ("Linux server", "Claude Code"), ("Mac mini", "pi, Claude Code")]
+MACHINES = [("MacBook", "pi, Codex"), ("Linux server", "Claude Code"), ("Mac mini", "Codex, Claude Code")]
 
 
 def fig_orbit(mode: str, still: bool) -> str:
