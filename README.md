@@ -10,7 +10,7 @@
   <a href="https://github.com/sclfcz/commerceagent"><img alt="Featured: CommerceAgent" src="https://img.shields.io/badge/Featured-CommerceAgent-C8783E?style=flat-square&logo=electron&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/health-miniprogram"><img alt="Featured: 康养日记" src="https://img.shields.io/badge/Featured-%E5%BA%B7%E5%85%BB%E6%97%A5%E8%AE%B0%20%C2%B7%20WeChat%20Mini%20Program-07C160?style=flat-square&logo=wechat&logoColor=white" /></a>
   <a href="https://github.com/sclfcz/growth-os"><img alt="Featured: Growth OS" src="https://img.shields.io/badge/Featured-Growth%20OS-2D5FB8?style=flat-square&logo=nextdotjs&logoColor=white" /></a>
-  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs: 26" src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/header-merged.svg" /></a><!-- header-stats:end -->
+  <!-- header-stats:start --><a href="#open-source-contributions"><img alt="Upstream merged PRs: 28" src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/header-merged.svg" /></a><!-- header-stats:end -->
 </p>
 
 I studied materials, where metals don't break all at once: they give way one row of atoms at a time. I build software the same way, in small verified steps.
@@ -102,7 +102,7 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 
 <!-- merged-prs:start -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="26 merged PRs in 10 projects, 279.4k upstream stars" />
+  <img src="https://raw.githubusercontent.com/sclfcz/sclfcz/main/assets/stats.svg" alt="28 merged PRs in 11 projects, 281.5k upstream stars" />
 </p>
 
 | Project | ★ | Language | Merged |
@@ -116,9 +116,10 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 | [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 11.8k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 8 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`apache/burr`](https://github.com/apache/burr) | 2.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
+| [`Tencent-Hunyuan/Hy-Memory`](https://github.com/Tencent-Hunyuan/Hy-Memory) | 2.0k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 2 |
 | [`llm-d/llm-d-inference-sim`](https://github.com/llm-d/llm-d-inference-sim) | 235 | ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) | 1 |
 
-<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-11-10 03:29 UTC.</sub>
+<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-11-10 18:55 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
