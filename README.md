@@ -113,13 +113,13 @@ Every upstream project that has merged one of my pull requests, whatever its siz
 | [`PrefectHQ/fastmcp`](https://github.com/PrefectHQ/fastmcp) | 28.4k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 2 |
 | [`deepset-ai/haystack`](https://github.com/deepset-ai/haystack) | 27.0k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`Unstructured-IO/unstructured`](https://github.com/Unstructured-IO/unstructured) | 15.7k | ![HTML](https://img.shields.io/badge/-HTML-E34F26?style=flat-square&logo=html5&logoColor=white) | 1 |
-| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 11.8k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 8 |
+| [`TencentCloud/Octop`](https://github.com/TencentCloud/Octop) | 11.9k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 8 |
 | [`VRSEN/agency-swarm`](https://github.com/VRSEN/agency-swarm) | 4.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`apache/burr`](https://github.com/apache/burr) | 2.6k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 1 |
 | [`Tencent-Hunyuan/Hy-Memory`](https://github.com/Tencent-Hunyuan/Hy-Memory) | 2.0k | ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white) | 2 |
 | [`llm-d/llm-d-inference-sim`](https://github.com/llm-d/llm-d-inference-sim) | 235 | ![Go](https://img.shields.io/badge/-Go-00ADD8?style=flat-square&logo=go&logoColor=white) | 1 |
 
-<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-11-10 18:55 UTC.</sub>
+<sub>Merges only; every upstream project that merged a pull request is listed, whatever its size. Checked automatically by [.github/workflows/refresh.yml](.github/workflows/refresh.yml); last change 2026-11-10 23:59 UTC.</sub>
 <!-- merged-prs:end -->
 
 ## Tech
